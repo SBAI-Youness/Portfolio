@@ -6,10 +6,11 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="bg-black min-h-screen">
       <Nav />
       <Hero />
       <About />
@@ -18,6 +19,7 @@ function App() {
       <Projects />
       <Certifications />
       <Contact />
+      <Footer />
     </div>
   )
 }

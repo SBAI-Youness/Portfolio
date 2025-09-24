@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+/* Dark hacker grid background */
+.hacker-grid {
+  background-color: #0a0a0b; /* near-black */
+  background-image:
+    linear-gradient(rgba(255, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255,0,0,0.06), transparent 40%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-position: top left, top left, center;
+}
+
+/* Subtle text rendering & selection */
+html, body, #root {
+  height: 100%;
+}
+
+::selection {
+  background: rgba(239, 68, 68, 0.25); /* red-500/25 */
+  color: #fff;
+}
+
+/* Marquee utilities */
+@keyframes marquee-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-x 28s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}

@@ -5,7 +5,7 @@ export const projects = [
     description:
       "Snake game with solo and 1v1 competitive modes, real-time input handling, persistent high scores, and smooth 60 FPS rendering.",
     image: "/src/assets/projects/project1.png",
-    links: {}
+    links: { github: "https://github.com/SBAI-Youness/Snake_Game" }
   },
   {
     title: "Stock Management System",
@@ -13,7 +13,7 @@ export const projects = [
     description:
       "Secure console CRUD with auth, search/sort, OpenSSL password hashing, brute-force prevention, and secure session management.",
     image: "/src/assets/projects/project2.png",
-    links: {}
+    links: { github: "https://github.com/SBAI-Youness/Stock_Management_System" }
   },
   {
     title: "Sudoku Game",
@@ -21,7 +21,7 @@ export const projects = [
     description:
       "Sudoku with backtracking generation, difficulty levels, live timer, and save/load using raylib for graphics.",
     image: "/src/assets/projects/project3.png",
-    links: {}
+    links: { github: "https://github.com/SBAI-Youness/Sudoku_Game" }
   },
   {
     title: "Melody Mosaic",
@@ -29,6 +29,6 @@ export const projects = [
     description:
       "Full‑stack music platform with playback, playlists, real-time chat, and secure auth; modern UI and Cloudinary media storage.",
     image: "/src/assets/projects/project4.png",
-    links: {}
+    links: { github: "https://github.com/SBAI-Youness/MelodyMosaic" }
   }
 ]
