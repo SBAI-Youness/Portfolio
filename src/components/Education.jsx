@@ -2,7 +2,7 @@ import {education} from "../data/education";
 
 export default function Education() {
   return (
-    <section id="education" className="bg-black text-neutral-300">
+    <section id="education" className="bg-black text-neutral-300 scroll-mt-24">
       <div className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Education</h2>
         <ol className="mt-6 space-y-6">

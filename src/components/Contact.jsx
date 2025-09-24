@@ -2,7 +2,7 @@ import {author} from "../data/author";
 
 export default function Education() {
   return (
-    <section id="contact" className="bg-black text-neutral-300">
+    <section id="contact" className="bg-black text-neutral-300 scroll-mt-24">
       <div className="mx-auto max-w-4xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Contact</h2>
         <div className="mt-6 grid sm:grid-cols-2 gap-4">

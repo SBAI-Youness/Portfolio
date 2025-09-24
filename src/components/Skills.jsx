@@ -14,7 +14,7 @@ export default function Skills() {
     ["Game Dev", skills.technical.gameDev],
   ];
   return (
-    <section id="skills" className="bg-black text-neutral-300">
+    <section id="skills" className="bg-black text-neutral-300 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Skills</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

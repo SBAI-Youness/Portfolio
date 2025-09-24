@@ -3,13 +3,13 @@ import {certifications} from "../data/certifications";
 export default function Certifications() {
   const items = [...certifications, ...certifications];
   return (
-    <section id="certifications" className="bg-black text-neutral-300">
+    <section id="certifications" className="bg-black text-neutral-300 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Certifications</h2>
         <div className="mt-6 marquee">
           <div className="marquee-track gap-4">
             {items.map((c, idx) => (
-              <article key={`${c.name}-${idx}`} className="flex items-center gap-3 min-w-[320px] rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3">
+              <article key={`${c.name}-${idx}`} className="flex items-center gap-3 min-w-[280px] sm:min-w-[320px] rounded-lg border border-neutral-800 bg-neutral-950 px-4 py-3">
                 {c.image ? (
                   <img src={c.image} alt={c.name} className="h-10 w-10 rounded object-cover border border-neutral-800" />
                 ) : (

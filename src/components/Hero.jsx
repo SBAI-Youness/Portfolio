@@ -20,14 +20,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="hacker-grid text-white pt-24 md:pt-28">
+    <section id="home" className="hacker-grid text-white pt-24 md:pt-28 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-10 items-end min-h-[80vh]">
         {/* Left: Image */}
         <div className="order-2 md:order-1 flex justify-center md:justify-start">
           <img
             src={profile1}
             alt={author.name}
-            className="w-[320px] md:w-[420px] rounded-full border border-red-700/40 shadow-[0_0_80px_-20px_rgba(239,68,68,0.45)]"
+            className="w-[280px] sm:w-[320px] md:w-[420px] rounded-full border border-red-700/40 shadow-[0_0_80px_-20px_rgba(239,68,68,0.45)]"
           />
         </div>
 
