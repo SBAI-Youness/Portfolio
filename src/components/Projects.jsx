@@ -2,13 +2,13 @@ import {projects} from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-black text-neutral-300">
+    <section id="projects" className="bg-black text-neutral-300 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Projects</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
             <article key={p.title} className="rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950">
-              <img src={p.image} alt={p.title} className="w-full h-44 object-cover" />
+              <img src={p.image} alt={p.title} loading="lazy" className="w-full aspect-[16/9] object-cover" />
               <div className="p-4">
                 <h3 className="text-white font-medium">{p.title}</h3>
                 <p className="mt-2 text-sm text-neutral-400 line-clamp-3">{p.description}</p>
