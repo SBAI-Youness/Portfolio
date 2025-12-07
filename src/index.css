@@ -41,3 +41,12 @@ html, body, #root {
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
+
+/* Custom wider container */
+.max-w-8xl {
+  max-width: 1400px;
+}
+
+.max-w-9xl {
+  max-width: 1600px;
+}

@@ -2,8 +2,8 @@ import {projects} from "../data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-black text-neutral-300 scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+    <section id="projects" className="text-neutral-300 scroll-mt-24">
+      <div className="mx-auto max-w-7xl px-6 py-20">
         <h2 className="text-white text-2xl font-bold">Projects</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (

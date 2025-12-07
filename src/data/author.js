@@ -5,7 +5,7 @@ export const author = {
   email: "youness.sbai.work@gmail.com",
   phone: "+212 652-919299",
   github: "SBAI-Youness",
-  linkedin: "Youness SBAI",
+  linkedin: "y-sbai",
   summary:
     "Third-year Computer Engineering & Networks student at EMSI Marrakesh, specializing in cybersecurity and programming. Actively involved in CTFs and technical projects, pushing skills further and contributing to the tech community.",
   roles: [

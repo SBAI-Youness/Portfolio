@@ -1,9 +1,9 @@
-import {author} from "../data/author";
+import { author } from "../data/author";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-black text-neutral-300 border-t border-red-900/20">
+    <footer className="bg-[#0a0a0a] text-neutral-300 border-t border-red-900/20">
       <div className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-3 gap-8">
         <div>
           <p className="text-white font-semibold">{author.name}</p>
@@ -24,7 +24,7 @@ export default function Footer() {
             <a href={`mailto:${author.email}`} className="text-sm underline underline-offset-4 hover:text-white">{author.email}</a>
           </div>
           <div className="mt-3 flex items-center gap-3">
-            <a href="https://www.linkedin.com/in/youness-sbai" target="_blank" className="h-9 w-9 inline-flex items-center justify-center rounded-full border border-neutral-700 hover:border-red-500 hover:bg-red-600/10 transition">
+            <a href="https://www.linkedin.com/in/y-sbai" target="_blank" className="h-9 w-9 inline-flex items-center justify-center rounded-full border border-neutral-700 hover:border-red-500 hover:bg-red-600/10 transition">
               <span className="sr-only">LinkedIn</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-neutral-300"><path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.03 2.05-3.03 4.16V24h-3.8V8z"/></svg>
             </a>
