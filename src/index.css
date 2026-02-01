@@ -1,52 +1,74 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Dark hacker grid background */
-.hacker-grid {
-  background-color: #0a0a0b; /* near-black */
-  background-image:
-    linear-gradient(rgba(255, 0, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(255,0,0,0.06), transparent 40%);
-  background-size: 40px 40px, 40px 40px, 100% 100%;
-  background-position: top left, top left, center;
-}
-
-/* Subtle text rendering & selection */
-html, body, #root {
-  height: 100%;
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 10%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 100%;
+    --radius: 0.25rem;
+  }
 }
 
 ::selection {
-  background: rgba(239, 68, 68, 0.25); /* red-500/25 */
-  color: #fff;
+  @apply bg-white text-black;
 }
 
-/* Marquee utilities */
-@keyframes marquee-x {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased relative overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Extremely subtle grain texture */
+  body::before {
+    content: "";
+    @apply fixed inset-0 pointer-events-none opacity-[0.015] z-[50];
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    filter: invert(1);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-medium text-foreground;
+  }
 }
 
-.marquee {
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-}
+@layer components {
+  .section-title {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground mb-12 flex items-center gap-4;
+  }
 
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-x 28s linear infinite;
-}
+  .section-divider {
+    @apply flex-1 h-[1px] bg-border;
+  }
 
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-/* Custom wider container */
-.max-w-8xl {
-  max-width: 1400px;
-}
-
-.max-w-9xl {
-  max-width: 1600px;
+  .nav-link {
+    @apply text-muted-foreground hover:text-white transition-colors duration-200;
+  }
 }
