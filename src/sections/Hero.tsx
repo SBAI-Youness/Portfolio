@@ -49,7 +49,7 @@ export const Hero = () => {
                     <img
                         src={profilePicture}
                         alt={name}
-                        className="w-40 h-40 md:w-48 md:h-48 rounded-full border border-border object-cover transition-all duration-500"
+                        className="w-48 h-48 md:w-64 md:h-64 rounded-full border border-border object-cover transition-all duration-500"
                     />
                 </div>
             )}

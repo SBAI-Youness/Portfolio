@@ -15,7 +15,7 @@ export const portfolioData: PortfolioData = {
             "CTF Player",
             "Open-source Contributor"
         ],
-        profilePicture: "/assets/pictures/picture1.png",
+        profilePicture: "/assets/pictures/sbai.jpeg",
         resume: "/assets/resume/resume.pdf"
     },
     education: [
@@ -52,7 +52,7 @@ export const portfolioData: PortfolioData = {
         security: ["Metasploit", "Nmap", "Burp Suite"],
         operatingSystems: ["Windows", "Linux"],
         design: ["Merise", "UML"],
-        virtualization: ["VirtualBox", "VMware"],
+        virtualization: ["VirtualBox", "VMware", "QEMU"],
         vcs: ["Git", "GitHub"],
         gameDev: ["SDL", "Raylib"]
     },
