@@ -42,7 +42,6 @@ export interface Certification {
     date: string;
     image: string;
     url: string;
-    skills: string[];
 }
 
 export interface PortfolioData {
