@@ -92,22 +92,6 @@ export const portfolioData: PortfolioData = {
             image: "/assets/projects/stock_management_system.png",
             links: { github: "https://github.com/SBAI-Youness/Stock_Management_System" }
         },
-        {
-            title: "Sudoku Game",
-            stack: ["C", "Raylib"],
-            description:
-                "Sudoku with backtracking generation, difficulty levels, live timer, and save/load using raylib for graphics.",
-            image: "/assets/projects/sudoku_game.png",
-            links: { github: "https://github.com/SBAI-Youness/Sudoku_Game" }
-        },
-        {
-            title: "Snake Game",
-            stack: ["C", "SDL2"],
-            description:
-                "Snake game with solo and 1v1 competitive modes, real-time input handling, persistent high scores, and smooth 60 FPS rendering.",
-            image: "/assets/projects/snake_game.png",
-            links: { github: "https://github.com/SBAI-Youness/Snake_Game" }
-        },
     ],
     certifications: [
         {

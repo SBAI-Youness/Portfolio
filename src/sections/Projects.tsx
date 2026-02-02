@@ -67,6 +67,19 @@ export const Projects = () => {
                     <ProjectCard key={project.title} project={project} />
                 ))}
             </div>
+
+            <div className="flex justify-center pt-8">
+                <a
+                    href={`https://github.com/${portfolioData.author.github}?tab=repositories`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-3 px-8 py-4 bg-white/[0.03] border border-white/10 rounded-full text-white font-medium hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5"
+                >
+                    <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                    <span>View More on GitHub</span>
+                    <div className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </a>
+            </div>
         </section>
     );
 };
