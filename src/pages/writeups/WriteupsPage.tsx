@@ -90,7 +90,7 @@ export default function WriteupsPage() {
                     </h1>
                     <p className="text-muted-foreground">
                         {selectedPlatform === "All"
-                            ? "Explore my journey through various cybersecurity platforms."
+                            ? "Explore my journey through various cyber security platforms."
                             : `A collection of challenges I've solved on ${selectedPlatform}.`}
                     </p>
                 </div>
