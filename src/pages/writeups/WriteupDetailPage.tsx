@@ -6,6 +6,7 @@ import { WriteupMeta } from "@/components/writeups/WriteupMeta";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { TryHackMeIcon, HackTheBoxIcon } from "@/components/writeups/PlatformLogos";
@@ -87,12 +88,13 @@ export default function WriteupDetailPage() {
             <div className="prose prose-invert prose-pre:bg-muted/50 prose-pre:border prose-pre:border-muted max-w-none">
                 <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeHighlight]}
+                    rehypePlugins={[rehypeHighlight, rehypeRaw]}
                     components={{
                         h2: ({ node, ...props }) => <h2 className="text-2xl font-bold mt-12 mb-6 text-white border-b border-muted pb-2" {...props} />,
                         h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mt-8 mb-4 text-white" {...props} />,
                         p: ({ node, ...props }) => <p className="text-muted-foreground leading-relaxed mb-6" {...props} />,
                         ul: ({ node, ...props }) => <ul className="list-disc list-inside space-y-2 mb-6 text-muted-foreground" {...props} />,
+                        img: ({ node, ...props }) => <img className="rounded-lg border border-muted/50 my-6 shadow-lg mx-auto" {...props} />,
                         code: ({ node, inline, className, children, ...props }: any) => {
                             const match = /language-(\w+)/.exec(className || '');
                             return !inline && match ? (
