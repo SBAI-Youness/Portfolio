@@ -11,6 +11,3 @@ A modern portfolio website built with React and TypeScript.
 - **Routing:** React Router
 - **Markdown:** React Markdown with syntax highlighting
 - **Icons:** Lucide React
-
-## 📝 License
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
