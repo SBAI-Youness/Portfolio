@@ -48,7 +48,6 @@ export interface PortfolioData {
     author: {
         name: string;
         title: string;
-        location: string;
         email: string;
         phone: string;
         github: string;
