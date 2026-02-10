@@ -3,7 +3,6 @@ import type { PortfolioData } from "../types";
 export const author: PortfolioData['author'] = {
     name: "Youness SBAI",
     title: "Computer Engineering & Networks Student",
-    location: "",
     email: "youness.sbai.work@gmail.com",
     phone: "+212 652-919299",
     github: "SBAI-Youness",

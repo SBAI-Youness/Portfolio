@@ -2,7 +2,8 @@ import { portfolioData } from "@/data/portfolioData";
 import { motion } from "framer-motion";
 import {
     Code2,
-    ShieldCheck,
+    Sword,
+    Shield,
     Network,
     Database,
     Globe,
@@ -42,10 +43,15 @@ const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
         icon: Network,
         color: "text-emerald-400"
     },
-    security: {
-        label: "Cybersecurity",
-        icon: ShieldCheck,
+    offensiveSecurity: {
+        label: "Offensive Security",
+        icon: Sword,
         color: "text-red-400"
+    },
+    defensiveSecurity: {
+        label: "Defensive Security",
+        icon: Shield,
+        color: "text-blue-400"
     },
     operatingSystems: {
         label: "Operating Systems",

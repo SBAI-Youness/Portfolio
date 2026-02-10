@@ -17,7 +17,8 @@ export interface SkillGroup {
     web: string[];
     databases: string[];
     networking: string[];
-    security: string[];
+    offensiveSecurity: string[];
+    defensiveSecurity: string[];
     operatingSystems: string[];
     design: string[];
     virtualization: string[];
