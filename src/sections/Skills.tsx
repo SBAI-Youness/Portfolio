@@ -34,12 +34,12 @@ const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
         color: "text-cyan-400"
     },
     databases: {
-        label: "Databases",
+        label: "Database Management",
         icon: Database,
         color: "text-amber-400"
     },
     networking: {
-        label: "Networking",
+        label: "Networking & Protocols",
         icon: Network,
         color: "text-emerald-400"
     },
