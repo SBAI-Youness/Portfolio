@@ -9,15 +9,4 @@ icon: "https://tryhackme-images.s3.amazonaws.com/room-icons/78f10e9c93abc65cba95
 roomUrl: "https://tryhackme.com/room/hfb1thegame"
 ---
 
-## 🔍 Initial Access
-
-Initial access was gained through a vulnerable web application.
-
-## 🚀 Privilege Escalation
-
-We found a kernel exploit that allowed us to get root access.
-
-```bash
-whoami
-# root
-```
+I solved this challenge, but i still didn't do a writeup for it!
