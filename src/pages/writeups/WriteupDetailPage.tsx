@@ -38,11 +38,11 @@ export default function WriteupDetailPage() {
     if (!entry) return (
         <div className="py-20 flex flex-col items-center">
             <h1 className="text-2xl font-bold text-white">
-            Write-up not found
+                Write-up not found
             </h1>
 
             <Link to="/writeups" className="mt-4">
-            <Button>Back to Listings</Button>
+                <Button>Back to Listings</Button>
             </Link>
         </div>
     );

@@ -34,7 +34,7 @@ export const WriteupCard = ({ meta }: WriteupCardProps) => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <WriteupMeta meta={meta} />
-                    <p className="text-muted-foreground line-clamp-2">{meta.excerpt}</p>
+                    <p className="text-muted-foreground">{meta.excerpt}</p>
                 </CardContent>
             </Card>
         </Link>
