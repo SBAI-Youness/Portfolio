@@ -24,7 +24,7 @@ version scan to confirm which services are exposed.
 nmap -sV <TARGET_IP>
 ```
 
-![Nmap Scan Screenshot](/assets/writeups/agentt/scan.png)
+![Nmap Scan Screenshot](/assets/writeups/thm-rooms/agentt/scan.png)
 
 From the scan results, we observe that **port 80 (HTTP)** is open.
 
@@ -40,7 +40,7 @@ environments.
 
 Since HTTP is open, we now browse to the target IP.
 
-![Website Screenshot](/assets/writeups/agentt/website.png)
+![Website Screenshot](/assets/writeups/thm-rooms/agentt/website.png)
 
 The page appears to be a simple themed website. Inspecting the source
 code does not reveal any obvious vulnerabilities.
@@ -59,7 +59,7 @@ To ensure nothing is hidden, we perform directory brute-forcing:
 gobuster dir -u http://<TARGET_IP> -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![FFUF Scan Screenshot](/assets/writeups/agentt/directory_enumeration.png)
+![FFUF Scan Screenshot](/assets/writeups/thm-rooms/agentt/directory_enumeration.png)
 
 No additional directories or hidden endpoints are discovered.
 
@@ -88,7 +88,7 @@ Then execute it:
 python3 web-exploit.py
 ```
 
-![Exploit Execution Screenshot](/assets/writeups/agentt/exploit.png)
+![Exploit Execution Screenshot](/assets/writeups/thm-rooms/agentt/exploit.png)
 
 Successful execution grants command execution on the target system.
 
@@ -103,6 +103,6 @@ locate the flag file:
 /flag.txt
 ```
 
-![Flag Screenshot](/assets/writeups/agentt/flag.png)
+![Flag Screenshot](/assets/writeups/thm-rooms/agentt/flag.png)
 
 The user flag is successfully retrieved.

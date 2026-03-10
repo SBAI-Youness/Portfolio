@@ -10,15 +10,26 @@ export const WriteupMeta = ({ meta }: WriteupMetaProps) => {
     return (
         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-6">
             <div className="flex items-center gap-1">
-                <Badge variant={meta.platform === "TryHackMe" ? "secondary" : "outline"} className="bg-opacity-10">
-                    {meta.platform}
+                <Badge
+                    variant={(meta.platform === "TryHackMe" || meta.platform === "CTF") ? "secondary" : "outline"}
+                    className="bg-opacity-10"
+                >
+                    {meta.platform === "CTF" ? "CTF Competition" : meta.platform}
                 </Badge>
             </div>
+            {meta.ctfName && (
+                <div className="flex items-center gap-1">
+                    <Badge variant="secondary" className="bg-opacity-10 text-blue-400">
+                        {meta.ctfName}
+                    </Badge>
+                </div>
+            )}
             <div className="flex items-center gap-1">
                 <Badge
                     variant="outline"
-                    className={`${meta.difficulty === "Easy" ? "text-green-500" :
-                        meta.difficulty === "Medium" ? "text-yellow-500" : "text-red-500"
+                    className={`border-none ${meta.difficulty === "Easy" ? "bg-green-500/10 text-green-500" :
+                        meta.difficulty === "Medium" ? "bg-yellow-500/10 text-yellow-500" :
+                            "bg-red-500/10 text-red-500"
                         }`}
                 >
                     {meta.difficulty}
@@ -26,7 +37,7 @@ export const WriteupMeta = ({ meta }: WriteupMetaProps) => {
             </div>
             <div className="flex items-center gap-1">
                 <CalendarDays className="h-4 w-4" />
-                {new Date(meta.date).toLocaleDateString()}
+                {new Date(meta.date).toLocaleDateString('en-GB')}
             </div>
             <div className="flex items-center gap-2">
                 <Tag className="h-4 w-4" />

@@ -9,7 +9,7 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { TryHackMeIcon, HackTheBoxIcon } from "@/components/writeups/PlatformLogos";
+import { TryHackMeIcon, HackTheBoxIcon, CTFIcon } from "@/components/writeups/PlatformLogos";
 
 export default function WriteupDetailPage() {
     const { slug } = useParams<{ slug: string }>();
@@ -58,15 +58,19 @@ export default function WriteupDetailPage() {
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="flex items-center gap-6">
-                        <div className="h-28 w-28 shrink-0 rounded-3xl overflow-hidden bg-muted/50 flex items-center justify-center border border-muted-foreground/10 p-3 shadow-2xl">
+                        <div className={`${entry.meta.ctfName === 'ST4F1T' ? 'h-32 w-32' : 'h-28 w-28'} shrink-0 rounded-3xl overflow-hidden bg-muted/50 flex items-center justify-center border border-muted-foreground/10 p-3 shadow-2xl`}>
                             {entry.meta.icon ? (
                                 <img src={entry.meta.icon} alt={entry.meta.title} className="h-full w-full object-contain" />
                             ) : (
-                                <div className="p-4 text-muted-foreground/30">
+                                <div className={entry.meta.ctfName === 'ST4F1T' ? "h-full w-full" : "p-4 text-muted-foreground/30"}>
                                     {entry.meta.platform === 'TryHackMe' ? (
                                         <TryHackMeIcon className="h-14 w-14" />
-                                    ) : (
+                                    ) : entry.meta.platform === 'HackTheBox' ? (
                                         <HackTheBoxIcon className="h-14 w-14" />
+                                    ) : entry.meta.ctfName === 'ST4F1T' ? (
+                                        <img src="/assets/icons/ctf/st4f1t.png" alt="ST4F1T" className="h-full w-full object-contain" />
+                                    ) : (
+                                        <CTFIcon className="h-14 w-14" />
                                     )}
                                 </div>
                             )}
@@ -81,7 +85,7 @@ export default function WriteupDetailPage() {
                         <a href={entry.meta.roomUrl} target="_blank" rel="noopener noreferrer">
                             <Button className="gap-2 bg-blue-600 hover:bg-blue-700 text-white">
                                 <ExternalLink className="h-4 w-4" />
-                                View Room on {entry.meta.platform}
+                                View Room on {entry.meta.platform === "CTF" ? "CTF Competition" : entry.meta.platform}
                             </Button>
                         </a>
                     )}

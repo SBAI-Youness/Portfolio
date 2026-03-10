@@ -2,8 +2,10 @@ import yaml from "js-yaml";
 
 export interface WriteupMeta {
     title: string;
-    platform: "TryHackMe" | "HackTheBox";
+    platform: "TryHackMe" | "HackTheBox" | "CTF";
     difficulty: "Easy" | "Medium" | "Hard";
+    category?: "pwn" | "rev" | "osint" | "web" | "crypto" | "misc";
+    ctfName?: string;
     date: string;
     tags: string[];
     excerpt: string;
@@ -32,7 +34,7 @@ function parseMarkdown(raw: string) {
 }
 
 export async function loadWriteups(): Promise<WriteupEntry[]> {
-    const modules = import.meta.glob("/src/content/writeups/*.md", {
+    const modules = import.meta.glob("/src/content/writeups/**/*.md", {
         query: '?raw',
         import: 'default',
         eager: true

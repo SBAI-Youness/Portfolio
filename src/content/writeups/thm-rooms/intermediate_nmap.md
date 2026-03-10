@@ -20,7 +20,7 @@ port scan to understand the attack surface.
 nmap -sV <TARGET_IP>
 ```
 
-![Nmap Full Scan Screenshot](/assets/writeups/intermediate_nmap/scan.png)
+![Nmap Full Scan Screenshot](/assets/writeups/thm-rooms/intermediate_nmap/scan.png)
 
 From the scan results, we discover:
 
@@ -45,7 +45,7 @@ We connect to the service manually to confirm its behavior.
 nc <TARGET_IP> 31337
 ```
 
-![Port 31337 Netcat Screenshot](/assets/writeups/intermediate_nmap/netcat_connection_to_port_31337.png)
+![Port 31337 Netcat Screenshot](/assets/writeups/thm-rooms/intermediate_nmap/netcat_connection_to_port_31337.png)
 
 The service responds, confirming the Nmap output.
 However, it does not directly provide a shell or flag.
@@ -61,7 +61,7 @@ against the available SSH services.
 ssh ubuntu@<TARGET_IP> -p 22
 ```
 
-![SSH 22 Successful Login Screenshot](/assets/writeups/intermediate_nmap/ssh_connection.png)
+![SSH 22 Successful Login Screenshot](/assets/writeups/thm-rooms/intermediate_nmap/ssh_connection.png)
 
 Authentication succeeds and we gain shell access using the provided credentials.
 
@@ -75,7 +75,7 @@ With shell access established, we begin basic Linux enumeration:
 - List available users  
 - Check other home directories  
 
-![User Enumeration Screenshot](/assets/writeups/intermediate_nmap/user_enum.png)
+![User Enumeration Screenshot](/assets/writeups/thm-rooms/intermediate_nmap/user_enum.png)
 
 While exploring the filesystem, we discover another user's home
 directory containing the flag file.
@@ -86,6 +86,6 @@ directory containing the flag file.
 
 Navigating to the discovered directory reveals the flag:
 
-![Flag Screenshot](/assets/writeups/intermediate_nmap/flag.png)
+![Flag Screenshot](/assets/writeups/thm-rooms/intermediate_nmap/flag.png)
 
 The flag is successfully retrieved.
