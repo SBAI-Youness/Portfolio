@@ -101,6 +101,8 @@ export default function WriteupDetailPage() {
                         h3: ({ node, ...props }) => <h3 className="text-xl font-semibold mt-8 mb-4 text-white" {...props} />,
                         p: ({ node, ...props }) => <p className="text-muted-foreground leading-relaxed mb-6" {...props} />,
                         ul: ({ node, ...props }) => <ul className="list-disc list-inside space-y-2 mb-6 text-muted-foreground" {...props} />,
+                        ol: ({ node, ...props }) => <ol className="list-decimal list-inside space-y-2 mb-6 text-muted-foreground" {...props} />,
+                        li: ({ node, ...props }) => <li className="text-muted-foreground leading-relaxed" {...props} />,
                         img: ({ node, ...props }) => <img className="rounded-lg border border-muted/50 my-6 shadow-lg mx-auto" {...props} />,
                         code: ({ node, inline, className, children, ...props }: any) => {
                             const match = /language-(\w+)/.exec(className || '');
