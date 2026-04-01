@@ -10,6 +10,7 @@ import rehypeRaw from "rehype-raw";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { TryHackMeIcon, HackTheBoxIcon, CTFIcon } from "@/components/writeups/PlatformLogos";
+import { CodeBlock } from "@/components/custom/CodeBlock";
 
 export default function WriteupDetailPage() {
     const { slug } = useParams<{ slug: string }>();
@@ -107,16 +108,9 @@ export default function WriteupDetailPage() {
                         code: ({ node, inline, className, children, ...props }: any) => {
                             const match = /language-(\w+)/.exec(className || '');
                             return !inline && match ? (
-                                <div className="my-6 rounded-lg overflow-hidden border border-muted">
-                                    <div className="bg-muted px-4 py-2 text-xs font-mono text-muted-foreground border-b border-muted flex justify-between items-center">
-                                        <span>{match[1]}</span>
-                                    </div>
-                                    <pre className="p-4 overflow-x-auto bg-black/30">
-                                        <code className={className} {...props}>
-                                            {children}
-                                        </code>
-                                    </pre>
-                                </div>
+                                <CodeBlock language={match[1]} className={className} {...props}>
+                                    {children}
+                                </CodeBlock>
                             ) : (
                                 <code className="bg-muted/50 px-1.5 py-0.5 rounded text-sm font-mono text-pink-400" {...props}>
                                     {children}
