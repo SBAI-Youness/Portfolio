@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { TryHackMeIcon, HackTheBoxIcon, CTFIcon } from "@/components/writeups/PlatformLogos";
 import { CodeBlock } from "@/components/custom/CodeBlock";
+import { ImageZoom } from "@/components/ui/image-zoom";
 
 export default function WriteupDetailPage() {
     const { slug } = useParams<{ slug: string }>();
@@ -104,7 +105,7 @@ export default function WriteupDetailPage() {
                         ul: ({ node, ...props }) => <ul className="list-disc list-inside space-y-2 mb-6 text-muted-foreground" {...props} />,
                         ol: ({ node, ...props }) => <ol className="list-decimal list-inside space-y-2 mb-6 text-muted-foreground" {...props} />,
                         li: ({ node, ...props }) => <li className="text-muted-foreground leading-relaxed" {...props} />,
-                        img: ({ node, ...props }) => <img className="rounded-lg border border-muted/50 my-6 shadow-lg mx-auto" {...props} />,
+                        img: ({ node, ...props }) => <ImageZoom className="rounded-lg border border-muted/50 my-6 shadow-lg mx-auto" {...props} />,
                         code: ({ node, inline, className, children, ...props }: any) => {
                             const match = /language-(\w+)/.exec(className || '');
                             return !inline && match ? (
