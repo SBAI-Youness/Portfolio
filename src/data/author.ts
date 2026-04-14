@@ -13,6 +13,6 @@ export const author: PortfolioData['author'] = {
         "CTF Player",
         "Open-source Contributor"
     ],
-    profilePicture: "/assets/pictures/sbai.jpeg",
+    profilePicture: "/assets/pictures/sbai.jpg",
     resume: "/assets/resume/resume.pdf"
 };
