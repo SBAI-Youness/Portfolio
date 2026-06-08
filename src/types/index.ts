@@ -14,16 +14,14 @@ export interface Education {
 
 export interface SkillGroup {
     languages: string[];
-    web: string[];
     databases: string[];
     networking: string[];
     offensiveSecurity: string[];
     defensiveSecurity: string[];
     operatingSystems: string[];
-    design: string[];
+    securityTools: string[];
     virtualization: string[];
     vcs: string[];
-    gameDev: string[];
 }
 
 export interface Project {

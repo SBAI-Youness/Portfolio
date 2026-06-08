@@ -6,13 +6,11 @@ import {
     Shield,
     Network,
     Database,
-    Globe,
     Monitor,
-    Palette,
+    Terminal,
     Box,
     GitBranch,
-    Gamepad2,
-    type LucideIcon
+    type LucideIcon,
 } from "lucide-react";
 import type { SkillGroup } from "@/types";
 
@@ -27,11 +25,6 @@ const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
         label: "Languages",
         icon: Code2,
         color: "text-blue-400"
-    },
-    web: {
-        label: "Web Development",
-        icon: Globe,
-        color: "text-cyan-400"
     },
     databases: {
         label: "Database Management",
@@ -58,9 +51,9 @@ const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
         icon: Monitor,
         color: "text-slate-400"
     },
-    design: {
-        label: "Design & Modeling",
-        icon: Palette,
+    securityTools: {
+        label: "Security Tools",
+        icon: Terminal,
         color: "text-pink-400"
     },
     virtualization: {
@@ -72,11 +65,6 @@ const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
         label: "Version Control",
         icon: GitBranch,
         color: "text-orange-400"
-    },
-    gameDev: {
-        label: "Game Development",
-        icon: Gamepad2,
-        color: "text-purple-400"
     }
 };
 
