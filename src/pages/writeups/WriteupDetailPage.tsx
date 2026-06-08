@@ -71,6 +71,8 @@ export default function WriteupDetailPage() {
                                         <HackTheBoxIcon className="h-14 w-14" />
                                     ) : entry.meta.ctfName === 'ST4F1T' ? (
                                         <img src="/assets/icons/ctf/st4f1t.png" alt="ST4F1T" className="h-full w-full object-contain" />
+                                    ) : entry.meta.ctfName === 'AISEC 2026' ? (
+                                        <img src="/assets/icons/ctf/aisec_26.png" alt="AISEC 2026" className="h-full w-full object-contain" />
                                     ) : (
                                         <CTFIcon className="h-14 w-14" />
                                     )}

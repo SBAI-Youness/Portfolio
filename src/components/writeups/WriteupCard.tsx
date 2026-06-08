@@ -25,6 +25,8 @@ export const WriteupCard = ({ meta }: WriteupCardProps) => {
                                         <HackTheBoxIcon className="h-6 w-6" />
                                     ) : meta.ctfName === 'ST4F1T' ? (
                                         <img src="/assets/icons/ctf/st4f1t.png" alt="ST4F1T" className="h-full w-full object-contain" />
+                                    ) : meta.ctfName === 'AISEC 2026' ? (
+                                        <img src="/assets/icons/ctf/aisec_26.png" alt="AISEC 2026" className="h-full w-full object-contain" />
                                     ) : (
                                         <CTFIcon className="h-8 w-8" />
                                     )}

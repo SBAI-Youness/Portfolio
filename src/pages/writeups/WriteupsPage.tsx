@@ -151,6 +151,9 @@ export default function WriteupsPage() {
                                                 {ctfName === "ST4F1T" && (
                                                     <img src="/assets/icons/ctf/st4f1t.png" alt="ST4F1T" className="h-5 w-5 object-contain" />
                                                 )}
+                                                {ctfName === "AISEC 2026" && (
+                                                    <img src="/assets/icons/ctf/aisec_26.png" alt="AISEC 2026" className="h-5 w-5 object-contain" />
+                                                )}
                                                 {ctfName}
                                             </button>
                                         ))}
