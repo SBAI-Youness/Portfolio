@@ -45,6 +45,16 @@ export interface Certification {
     url: string;
 }
 
+export interface Experience {
+    company: string;
+    role: string;
+    start: string;
+    end: string;
+    location: string;
+    logo?: string;
+    url?: string;
+}
+
 export interface PortfolioData {
     author: {
         name: string;
@@ -58,6 +68,7 @@ export interface PortfolioData {
         profilePicture?: string;
         resume?: string;
     };
+    experiences: Experience[];
     education: Education[];
     skills: SkillGroup;
     projects: Project[];

@@ -5,7 +5,7 @@ export const education: Education[] = [
         school: "École Marocaine des Sciences de l'Ingénieur (EMSI)",
         programs: [
             {
-                degree: "Engineering Cycle – Computer Engineering & Networks",
+                degree: "Engineering Cycle - Computer Engineering & Networks",
                 start: "2025",
                 end: "Present",
             },

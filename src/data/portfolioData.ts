@@ -1,8 +1,9 @@
 import type { PortfolioData } from "../types";
-import { author, education, skills, projects, certifications } from "./index";
+import { author, education, experiences, skills, projects, certifications } from "./index";
 
 export const portfolioData: PortfolioData = {
     author,
+    experiences,
     education,
     skills,
     projects,
