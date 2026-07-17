@@ -9,6 +9,16 @@ export const projects: Project[] = [
         links: { github: "https://github.com/SBAI-Youness/KeeBox" }
     },
     {
+        title: "ReConan",
+        stack: ["Java", "JavaFX", "JavaFX SmartGraph", "SQL Server", "Maven"],
+        description: "ReConan is a Desktop-based OSINT and cyber investigation platform. It aggregates intelligence from multiple public data sources, storing and visualizing relationships between digital entities (such as domains, IPs, emails, and usernames).",
+        image: "/assets/projects/reconan.png",
+        links: {
+            github: "https://github.com/SBAI-Youness/ReConan",
+            live: "https://reconan.dev"
+        }
+    },
+    {
         title: "ieee-website",
         stack: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
         description: "Official website for the IEEE student branch at EMSI MARRAKESH — built with modern web technologies.",
