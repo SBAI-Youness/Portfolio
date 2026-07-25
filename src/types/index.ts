@@ -51,6 +51,7 @@ export interface Experience {
     location: string;
     logo?: string;
     url?: string;
+    description?: string[];
 }
 
 export interface PortfolioData {

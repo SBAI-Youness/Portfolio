@@ -125,6 +125,16 @@ export const Experiences = () => {
                                 <p className="text-xs md:text-sm text-muted-foreground font-normal">
                                     {exp.location}
                                 </p>
+
+                                {exp.description && exp.description.length > 0 && (
+                                    <ul className="mt-3 space-y-1.5 text-sm text-white/70 list-disc list-inside">
+                                        {exp.description.map((item, i) => (
+                                            <li key={i} className="leading-relaxed">
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </div>
                         </motion.div>
                     );

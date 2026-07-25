@@ -22,7 +22,7 @@ interface CategoryConfig {
 
 const categoryConfigs: Record<keyof SkillGroup, CategoryConfig> = {
     languages: {
-        label: "Languages",
+        label: "Programming & Scripting",
         icon: Code2,
         color: "text-blue-400"
     },
