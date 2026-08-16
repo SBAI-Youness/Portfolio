@@ -3,9 +3,11 @@ import type { Education } from "../types";
 export const education: Education[] = [
     {
         school: "École Marocaine des Sciences de l'Ingénieur (EMSI)",
+        logo: "/assets/icons/education/emsi.png",
+        url: "https://www.emsi.ma",
         programs: [
             {
-                degree: "Engineering Cycle - Computer Engineering & Networks",
+                degree: "Engineering Cycle - Cyber Security & Network Infrastructure",
                 start: "2025",
                 end: "Present",
             },
@@ -14,12 +16,6 @@ export const education: Education[] = [
                 start: "2023",
                 end: "2025",
             },
-        ]
+        ],
     },
-    {
-        school: "Établissement EL KHALED 2",
-        degree: "Baccalaureate in Physical Science",
-        start: "2022",
-        end: "2023",
-    }
 ];

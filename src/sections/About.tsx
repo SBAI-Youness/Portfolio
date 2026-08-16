@@ -7,7 +7,7 @@ export const About = () => {
                 <span>About</span>
                 <div className="section-divider"></div>
             </div>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-normal max-w-3xl">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-normal max-w-3xl">
                 {portfolioData.author.summary}
             </p>
         </section>

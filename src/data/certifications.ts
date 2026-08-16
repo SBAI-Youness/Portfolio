@@ -9,18 +9,11 @@ export const certifications: Certification[] = [
         url: "https://coursera.org/share/dabb879349a5499a0ef0806b2202fb41",
     },
     {
-        provider: "EPFL",
-        name: "Introduction à la programmation orientée objet (en C++)",
+        provider: "TryHackMe",
+        name: "Pre Security",
         date: "2024",
-        image: "/assets/icons/certifications/epfl.png",
-        url: "https://coursera.org/share/291322f2deffcb6740f55bbf2d896d2a",
-    },
-    {
-        provider: "University of Michigan",
-        name: "C Programming for Everybody Specialization",
-        date: "2024",
-        image: "/assets/icons/certifications/university_of_michigan.png",
-        url: "https://coursera.org/share/356771130900a0bdc595de61a4856a7b",
+        image: "/assets/icons/certifications/tryhackme.png",
+        url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-FPKSXMYN1Z.pdf",
     },
     {
         provider: "Meta Brains",

@@ -6,6 +6,8 @@ export interface EducationProgram {
 
 export interface Education {
     school: string;
+    logo?: string;
+    url?: string;
     programs?: EducationProgram[];
     degree?: string; // For older entries with a single degree
     start?: string;

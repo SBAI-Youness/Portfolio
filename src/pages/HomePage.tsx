@@ -8,7 +8,8 @@ import { Footer } from "../components/custom/Footer";
 import { portfolioData } from "../data/portfolioData";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
+import { BookOpen, GraduationCap, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
     return (
@@ -37,38 +38,85 @@ export default function HomePage() {
 }
 
 const EducationSection = () => (
-    <section id="education" className="space-y-12">
+    <section id="education" className="space-y-8">
         <div className="section-title">
             <span>Education</span>
             <div className="section-divider"></div>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-6">
             {portfolioData.education.map((item: any, index: number) => (
-                <div key={index} className="space-y-4">
-                    <h3 className="text-xl font-bold text-white">{item.school}</h3>
+                <motion.div
+                    key={item.school + index}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex gap-4 items-start p-4 hover:bg-white/[0.02] rounded-lg transition-all duration-300 border border-transparent hover:border-white/5"
+                >
+                    {/* School Logo */}
+                    <div className="w-14 h-14 shrink-0 bg-white/[0.03] border border-white/10 rounded-md flex items-center justify-center p-1 overflow-hidden">
+                        {item.logo ? (
+                            <img
+                                src={item.logo}
+                                alt={`${item.school} logo`}
+                                className="w-full h-full object-contain"
+                                onError={(e: any) => {
+                                    e.currentTarget.style.display = "none";
+                                    const fallback = e.currentTarget.parentElement?.querySelector(".edu-fallback-icon");
+                                    if (fallback) fallback.classList.remove("hidden");
+                                }}
+                            />
+                        ) : null}
+                        <div className={`edu-fallback-icon flex items-center justify-center text-muted-foreground ${item.logo ? "hidden" : ""}`}>
+                            <GraduationCap className="w-6 h-6 stroke-[1.5]" />
+                        </div>
+                    </div>
 
-                    <div className="space-y-8">
-                        {item.programs ? (
-                            item.programs.map((prog: any, pIdx: number) => (
-                                <div key={pIdx} className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-                                    <h4 className="text-lg text-muted-foreground font-medium">{prog.degree}</h4>
+                    {/* Details */}
+                    <div className="flex-1 min-w-0 space-y-0.5">
+                        <div className="flex items-center gap-1.5">
+                            <h3 className="text-base md:text-lg font-bold text-white tracking-tight leading-tight">
+                                {item.school}
+                            </h3>
+                            {item.url && (
+                                <a
+                                    href={item.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted-foreground hover:text-white transition-colors"
+                                    aria-label={`Visit ${item.school} website`}
+                                >
+                                    <ExternalLink className="w-3 h-3" />
+                                </a>
+                            )}
+                        </div>
+
+                        {/* Programs or single degree */}
+                        <div className="mt-2 space-y-2">
+                            {item.programs ? (
+                                item.programs.map((prog: any, pIdx: number) => (
+                                    <div key={pIdx} className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                                        <p className="text-sm font-semibold text-white/80">{prog.degree}</p>
+                                        <span className="text-xs font-medium text-muted-foreground shrink-0 uppercase tracking-widest">
+                                            {prog.start} — {prog.end}
+                                        </span>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                                    <p className="text-sm font-semibold text-white/80">{item.degree}</p>
                                     <span className="text-xs font-medium text-muted-foreground shrink-0 uppercase tracking-widest">
-                                        {prog.start} — {prog.end}
+                                        {item.start} — {item.end}
                                     </span>
                                 </div>
-                            ))
-                        ) : (
-                            <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-                                <h4 className="text-lg text-muted-foreground font-medium">{item.degree}</h4>
-                                <span className="text-xs font-medium text-muted-foreground shrink-0 uppercase tracking-widest">
-                                    {item.start} — {item.end}
-                                </span>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
     </section>
 );
+
+

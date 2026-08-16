@@ -2,12 +2,12 @@ import type { PortfolioData } from "../types";
 
 export const author: PortfolioData['author'] = {
     name: "Youness SBAI",
-    title: "Computer Engineering & Networks Student",
+    title: "Cyber Security Engineer",
     email: "youness.sbai.work@gmail.com",
     phone: "+212 652-919299",
     github: "SBAI-Youness",
     linkedin: "y-sbai",
-    summary: "Third-year Computer Engineering & Networks student at EMSI, specializing in cybersecurity and programming. Actively involved in CTFs and technical projects, pushing skills further and contributing to the tech community.",
+    summary: "Cyber Security Engineer with a focus on web application and network infrastructure penetration testing. I identify and exploit vulnerabilities with precision, delivering detailed reports that empower teams to remediate effectively. Continuously sharpening my skills through real-world engagements and competitive CTF challenges.",
     roles: [
         "Junior Penetration Tester",
         "CTF Player",
