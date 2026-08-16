@@ -8,7 +8,7 @@ import { Footer } from "../components/custom/Footer";
 import { portfolioData } from "../data/portfolioData";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen, GraduationCap, ExternalLink } from "lucide-react";
+import { BookOpen, GraduationCap, ExternalLink, NotebookPen } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
@@ -16,8 +16,14 @@ export default function HomePage() {
         <div className="max-w-[750px] mx-auto space-y-24">
             <Header />
 
-            {/* Dynamic Link to Write-ups */}
-            <section className="flex justify-center">
+            {/* Links to Blog & Write-ups */}
+            <section className="flex flex-wrap justify-center gap-3">
+                <Link to="/blog">
+                    <Button variant="outline" className="gap-2 group">
+                        <NotebookPen className="h-4 w-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+                        Visit my Blog
+                    </Button>
+                </Link>
                 <Link to="/writeups">
                     <Button variant="outline" className="gap-2 group">
                         <BookOpen className="h-4 w-4 text-blue-400 group-hover:scale-110 transition-transform" />

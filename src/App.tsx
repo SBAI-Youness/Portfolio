@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import WriteupsPage from "./pages/writeups/WriteupsPage";
 import WriteupDetailPage from "./pages/writeups/WriteupDetailPage";
+import BlogsPage from "./pages/blog/BlogsPage";
+import BlogDetailPage from "./pages/blog/BlogDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function ScrollToTop() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/writeups" element={<div className="max-w-[750px] mx-auto"><WriteupsPage /></div>} />
           <Route path="/writeups/:slug" element={<div className="max-w-[750px] mx-auto"><WriteupDetailPage /></div>} />
+          <Route path="/blog" element={<div className="max-w-[750px] mx-auto"><BlogsPage /></div>} />
+          <Route path="/blog/:slug" element={<div className="max-w-[750px] mx-auto"><BlogDetailPage /></div>} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
